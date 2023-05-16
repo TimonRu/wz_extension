@@ -1,0 +1,13 @@
+{
+	"name":"РАСШИРЕНИЕ WORK-ZILLA",
+	"version": "1.0",
+	"description":"удаляем ненужные предложения и выделяет те на которые нужно обратить внимание",
+	"manifest_version":3,
+	"content_scripts":[
+		{
+			"matches": ["https://client.work-zilla.com/freelancer*"],
+			"js": ["scripts.js"],
+			"run_at": "document_end"
+		}
+	]
+}
