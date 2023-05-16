@@ -28,7 +28,7 @@ window.onload = function(){setTimeout(function(){
 		}
 	}
 	for (const key in words) {
-		if (Object.hasOwnProperty.call(words, key)) {if (words[key] > 1) {console.log("###",key.words[key]);big_wrds[key] = words[key];}}
+		if (Object.hasOwnProperty.call(words, key)) {if (words[key] > 1) {console.log("###",key, words[key]);big_wrds[key] = words[key];}}
 	}
 	let mnlst = document.getElementsByClassName("sliding-down-panel");
 	for (let i = 0; i < mnlst.length; i++) {
