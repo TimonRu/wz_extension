@@ -3,7 +3,6 @@ var white_list = ['','',''];
 var almost_white_list = ['','',''];
 var grey_list = ['','',''];
 
-
 var countwhite = 0;
 var countblack = 0;
 var cnsltxt = "";
@@ -52,7 +51,7 @@ window.onload = function () {
 			for (let index = 0; index < list_of_order.length; index++) {
 				let text1 = list_of_order[index].querySelector('div.text-wrapper').innerHTML.toLowerCase();
 				let white_check = check_lists(text1,white_orders);
-					if (white_check) {list_of_order[index].style.backgroundColor = "#99F";countwhite++;}
+					if (white_check) {list_of_order[index].parentElement.parentElement.style.backgroundColor = "#99F";countwhite++;}
 				let black_check = check_lists(text1,black_orders);
 					if (black_check) {
 						let alink = list_of_order[index].querySelector('input');
@@ -60,7 +59,7 @@ window.onload = function () {
 						countblack++;
 					} 
 				let grey_check = check_lists(text1,grey_orders);
-					if (grey_check) {list_of_order[index].style.backgroundColor = "#CCC";}
+					if (grey_check) {list_of_order[index].parentElement.parentElement.style.backgroundColor = "#CCC";}
 			}
 				if (countblack > 0) {
 					var linka = document.getElementsByClassName('wz-button linklike remove-orders-button');
